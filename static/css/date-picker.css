@@ -1,0 +1,100 @@
+:root {
+  --navbar-back: #293B5F;
+  --navbar-text: rgb(242, 165, 59);
+  --topbar-back: #13203a;
+  --topbar-text: rgb(242, 165, 59);
+  --one-word: rgb(247, 192, 73);
+  /* --topbar-text: rgb(221, 182, 25); */
+  --showcase-bg: rgb(68, 86, 121);
+  --showcase-txt: rgb(129, 121, 90);
+  --content-bg: #8d9fc6;
+  --body-bg: #8793ae;
+  /* Side sections background */
+  --side-section-bg: rgb(205, 199, 199);
+}
+/* (A) POPUP */
+.date-wrapper.show {
+  opacity: 1;
+  visibility: visible;
+}
+/* (B) CONTAINER */
+.date-wrapper {
+  position:absolute;
+  visibility: hidden;
+  max-width: 310px;
+  background: var(--content-bg);
+  padding: 10px;
+  border: 4px solid var(--navbar-text);
+  border-radius: 0.4em;
+}
+/* (C) MONTH + YEAR */
+.picker-my {
+  display: flex;
+  justify-content: space-between;
+}
+.picker-m {
+  width: 59%;
+  padding: 5px;
+  box-sizing: border-box;
+  font-size: 16px;
+}
+.picker-y {
+  width: 39%;
+  padding: 5px;
+  box-sizing: border-box;
+  font-size: 16px;
+}
+/* (D) DAY */
+/* PICKER-D = GREEN BOX = TABLE CONTAINER */
+.picker-d {
+  position: relative;
+  /* border: 2px solid red; */
+}
+table {
+  table-layout: fixed;
+  width: 270px;
+  border-radius: 0.3em;
+  border: 2px solid var(--navbar-text)
+}
+.picker-d table {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 0.6em;
+  color: var(--navbar-back);
+  border-collapse: separate;
+  width: 100%;
+  margin-top: 10px;
+  /* border: 2px solid blue; */
+}
+.picker-d table td {
+  /* width: 14.28%; 7 EQUAL COLUMNS */
+  width: 38px;
+  padding: 5px;
+  border-radius: 0.2em;
+  text-align: center;
+}
+/* HEADER */
+.picker-d-h td {
+  font-size: 0.8em;
+  font-weight: bold;
+}
+/* BLANK DATES */
+.picker-d-b {
+  background: #ddd;
+}
+/* TODAY */
+.picker-d-td {
+  /* background: #ffe0d4; */
+  background: var(--navbar-text);
+}
+/* PICKABLE DATES */
+.picker-d-d:hover {
+  cursor: pointer;
+  /* background: #2d68c4; */
+  background: var(--navbar-back);
+  color: #fff;
+}
+/* UNPICKABLE DATES */
+.picker-d-dd {
+  color: #aaa;
+  background: #ddd;
+}

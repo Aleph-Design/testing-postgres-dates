@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/static/css/styles.css">
+  <link rel="stylesheet" href="/static/css/date-picker.css">
+  <link rel="stylesheet" href="/static/css/time-picker.css">    
+  <title>Dates Test App</title>
+</head>
+<style>
+  .page-header-content {
+    display:flex;
+    flex-direction: column;
+  }
+  .form-card-start-container {
+    width: 100%;
+    border: 2px solid blue;
+  }
+  .date-time {
+    font-family:'Courier New', Courier, monospace;
+    position: absolute;
+    width: 100%;
+    top: 200px;
+  }
+  .submit {
+    position: relative;
+    top: 450px;
+  }
+</style>
+<body>
+  <div class="page-container">
+    <header class="page-header">
+      <h1 style="text-align: center;">Pick a Date</h1> 
+    </header>
+
+    <main class="page-main">
+      <form action="/upload" method="post">
+        <div class="page-header-content">
+
+          <div class="form-card-start-container">
+            <label for="start-date">We treffen elkaar op:</label>
+            <div class="form-card-start-details">
+              <input class="form-control date-control" type="text" id="start-date" name="start-date" onfocus="sDate(this)" value="">
+              <span>&nbsp;&nbsp;</span>
+              <input class="form-control time-control" type="text" id="start-time" name="start-time" onfocus="sTime(this)" value="">
+            </div>
+          </div>
+
+          <div class="date-time">
+            <h2>Start: {{.SD__}}</h2>
+            <h2>Tijd_: {{.ST__}}</h2>
+            <h2>Dtl__: {{.Dtl_}}</h2>
+            <h2>Data_: {{.Now_}}</h2>
+            <h2>Date_: {{.Date}}</h2>
+            <h2>Now__: {{.Now_}}</h2>
+            <h2>Zone_: {{.Zone}}</h2>
+            <h2>RFC3_: {{.RFC3}}</h2>
+          </div>
+
+          <div class="submit">
+            <button type="submit">Verstuur</button>
+          </div>
+        </div>
+      </form>
+
+    </main>
+    <footer class="page-footer">
+      <h1>The footer</h1>
+    </footer>
+  </div>
+  <script>
+    sDate = (x) => {dp.attach({ target: document.getElementById("start-date")})}
+    sTime = (x) => {tp.attach({ target: document.getElementById("start-time")})}
+  </script>
+  <!-- <script src="/static/js/main.js"></script> -->
+  <script src="/static/js/date-picker.js"></script>
+  <script src="/static/js/time-picker.js"></script>
+</body>
+</html>

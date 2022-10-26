@@ -1,0 +1,57 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  overflow:hidden;
+  box-sizing: border-box;
+}
+.body {
+  background-color:burlywood;
+}
+.page-container {
+  max-width: 1600px;
+  margin: 0 auto;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid red;
+  background-color:burlywood;
+}
+.page-header {
+  height: 130px;
+  border: 1px solid blue;
+  background-color: cadetblue;
+}
+.page-header-content {
+  padding: 0 25px 0;
+  line-height: 1rem;
+  display: inline-block;
+  display: flex;
+  justify-content: flex-start;
+}
+#file-fail-select {
+  padding: 0 25px 0;
+  color:crimson;
+  display: none;
+}
+#file-select {
+  padding: 0 25px 0;
+}
+.page-main {
+  flex: 1;
+}
+.page-footer {
+  height: 160px;
+  text-align: center;
+  border: 1px solid blue;
+  background-color: coral;
+}
+#canvas {
+  /*
+  Don't set height/width by CSS. 
+  This will stretch the display.
+  */
+  border: 1px solid #999;
+  margin: 1rem auto;
+  display: block;
+  background-color: antiquewhite;
+}

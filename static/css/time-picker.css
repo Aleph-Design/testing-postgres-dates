@@ -1,0 +1,69 @@
+
+.time-picker.show {
+  visibility: visible;
+}
+.time-picker {
+  visibility: hidden;
+  position:absolute;
+  width: 160px;
+  padding: 6px;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--content-bg);
+  border: 4px solid var(--navbar-text);
+  border-radius: 0.4em;
+}
+/* wrapper for hours and minutes cells */
+.cells-wrapper {
+  margin-top: -12px;
+  height: 120px;
+  display: flex;
+  justify-content: space-between;
+  /* border: 2px solid red; */
+}
+/* wrappers for hours and minutes */
+.hm-wrappers {
+  display: flex;
+  flex-direction: column;
+  /* align-items: center; */
+  font-size: 2.0em;
+  width: 46%;
+  /* border: 2px solid blue; */
+}
+/* styling up-down cells */
+.tp-up, .tp-down{
+  /* display:table-cell;
+  vertical-align: middle; */
+  padding-top: 6px;
+  height: 40px;
+  text-align: center;
+  cursor:pointer;
+  /* border: 2px solid red; */
+}
+.tp-val {
+  padding-top: 6px;
+  height: 40px;
+  text-align: center;
+  /* border: 2px solid green; */
+}
+.btn-wrapper {
+  /* position:relative; */
+  height: 40px;
+  margin-top: 6px;
+  display: flex;
+  justify-content:space-between;
+  letter-spacing: 0.1em;
+  /* border: 2px solid blue */
+}
+#tp-close, #tp-set {
+  width: 48%; 
+  height: 40px;
+  font-size: 1.0em; 
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  border-radius: 0.4em;;
+  color:cornsilk; 
+  cursor: pointer;
+}
+#tp-close { background:red; }
+#tp-set { background:green; }
